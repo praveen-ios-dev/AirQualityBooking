@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  AirQualityBooking
+//
+//  Created by Praveen on 22/04/26.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+
+AQI_TOKEN = 1bd85245dace9053499cb87a126716bf500575eb

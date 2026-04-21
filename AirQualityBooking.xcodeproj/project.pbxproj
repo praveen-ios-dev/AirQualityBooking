@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		77AE72212F9799A9007E4083 /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 77AE72202F9799A9007E4083 /* FactoryKit */; };
+		77AE72232F9799A9007E4083 /* FactoryTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 77AE72222F9799A9007E4083 /* FactoryTesting */; };
+		77AE72FB2F97B1D8007E4083 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 77AE72FA2F97B1D8007E4083 /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		77AE71802F979407007E4083 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +35,22 @@
 		77AE71892F979407007E4083 /* AirQualityBookingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirQualityBookingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		776F9F852F9819F400927C38 /* Exceptions for "AirQualityBooking" folder in "AirQualityBooking" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 77AE71712F979406007E4083 /* AirQualityBooking */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		77AE71742F979406007E4083 /* AirQualityBooking */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				776F9F852F9819F400927C38 /* Exceptions for "AirQualityBooking" folder in "AirQualityBooking" target */,
+			);
 			path = AirQualityBooking;
 			sourceTree = "<group>";
 		};
@@ -52,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77AE72212F9799A9007E4083 /* FactoryKit in Frameworks */,
+				77AE72FB2F97B1D8007E4083 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77AE72232F9799A9007E4083 /* FactoryTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +134,8 @@
 			);
 			name = AirQualityBooking;
 			packageProductDependencies = (
+				77AE72202F9799A9007E4083 /* FactoryKit */,
+				77AE72FA2F97B1D8007E4083 /* Alamofire */,
 			);
 			productName = AirQualityBooking;
 			productReference = 77AE71722F979406007E4083 /* AirQualityBooking.app */;
@@ -135,6 +159,7 @@
 			);
 			name = AirQualityBookingTests;
 			packageProductDependencies = (
+				77AE72222F9799A9007E4083 /* FactoryTesting */,
 			);
 			productName = AirQualityBookingTests;
 			productReference = 77AE717F2F979407007E4083 /* AirQualityBookingTests.xctest */;
@@ -195,6 +220,10 @@
 			);
 			mainGroup = 77AE71692F979406007E4083;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				77AE721F2F9799A9007E4083 /* XCRemoteSwiftPackageReference "Factory" */,
+				77AE72F92F97B1D8007E4083 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 77AE71732F979406007E4083 /* Products */;
 			projectDirPath = "";
@@ -271,6 +300,8 @@
 /* Begin XCBuildConfiguration section */
 		77AE71912F979407007E4083 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 77AE71742F979406007E4083 /* AirQualityBooking */;
+			baseConfigurationReferenceRelativePath = Application/Config.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -335,6 +366,8 @@
 		};
 		77AE71922F979407007E4083 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 77AE71742F979406007E4083 /* AirQualityBooking */;
+			baseConfigurationReferenceRelativePath = Application/Config.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -392,6 +425,8 @@
 		};
 		77AE71942F979407007E4083 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 77AE71742F979406007E4083 /* AirQualityBooking */;
+			baseConfigurationReferenceRelativePath = Application/Config.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -400,6 +435,8 @@
 				DEVELOPMENT_TEAM = M7NB3P64RD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AirQualityBooking/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "AirQualityBooking needs your location to show air quality data and set your current position on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,6 +461,8 @@
 		};
 		77AE71952F979407007E4083 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 77AE71742F979406007E4083 /* AirQualityBooking */;
+			baseConfigurationReferenceRelativePath = Application/Config.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -432,6 +471,8 @@
 				DEVELOPMENT_TEAM = M7NB3P64RD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AirQualityBooking/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "AirQualityBooking needs your location to show air quality data and set your current position on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -456,6 +497,8 @@
 		};
 		77AE71972F979407007E4083 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 77AE71742F979406007E4083 /* AirQualityBooking */;
+			baseConfigurationReferenceRelativePath = Application/Config.xcconfig;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -478,6 +521,8 @@
 		};
 		77AE71982F979407007E4083 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 77AE71742F979406007E4083 /* AirQualityBooking */;
+			baseConfigurationReferenceRelativePath = Application/Config.xcconfig;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -500,6 +545,8 @@
 		};
 		77AE719A2F979407007E4083 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 77AE71742F979406007E4083 /* AirQualityBooking */;
+			baseConfigurationReferenceRelativePath = Application/Config.xcconfig;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -520,6 +567,8 @@
 		};
 		77AE719B2F979407007E4083 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 77AE71742F979406007E4083 /* AirQualityBooking */;
+			baseConfigurationReferenceRelativePath = Application/Config.xcconfig;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -578,6 +627,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		77AE721F2F9799A9007E4083 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.3;
+			};
+		};
+		77AE72F92F97B1D8007E4083 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		77AE72202F9799A9007E4083 /* FactoryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77AE721F2F9799A9007E4083 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = FactoryKit;
+		};
+		77AE72222F9799A9007E4083 /* FactoryTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77AE721F2F9799A9007E4083 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = FactoryTesting;
+		};
+		77AE72FA2F97B1D8007E4083 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77AE72F92F97B1D8007E4083 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 77AE716A2F979406007E4083 /* Project object */;
 }

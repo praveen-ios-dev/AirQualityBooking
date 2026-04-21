@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct AirQualityBookingApp: App {
+    @State private var appCoordinator = AppCoordinator()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppCoordinatorView(coordinator: appCoordinator)
         }
     }
 }
