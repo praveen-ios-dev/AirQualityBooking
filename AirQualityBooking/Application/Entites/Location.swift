@@ -38,9 +38,13 @@ public struct Coordinate: Equatable, Hashable, Codable {
 
     /// Truncates to 3 decimal places for cache key matching
     public var cacheKey: String {
-        let lat = (latitude * 1000).rounded() / 1000
-        let lon = (longitude * 1000).rounded() / 1000
+        let lat = truncate(latitude)
+        let lon = truncate(longitude)
         return "\(lat),\(lon)"
+    }
+
+    private func truncate(_ value: Double) -> Double {
+        (value * 1000).rounded(.towardZero) / 1000
     }
 }
 

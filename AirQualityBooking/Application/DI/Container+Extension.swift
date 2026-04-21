@@ -16,6 +16,7 @@ extension Container {
 
 enum AppConfig {
     static var useMocks: Bool = false
+    
     nonisolated static var aqiToken: String {
             guard let token = Bundle.main.object(forInfoDictionaryKey: "AQI_TOKEN") as? String,
                   !token.isEmpty else {

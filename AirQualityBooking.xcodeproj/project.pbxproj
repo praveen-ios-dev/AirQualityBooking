@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		776F9F872F981E3200927C38 /* SETUP.md in Resources */ = {isa = PBXBuildFile; fileRef = 776F9F862F981E3200927C38 /* SETUP.md */; };
 		77AE72212F9799A9007E4083 /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 77AE72202F9799A9007E4083 /* FactoryKit */; };
 		77AE72232F9799A9007E4083 /* FactoryTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 77AE72222F9799A9007E4083 /* FactoryTesting */; };
 		77AE72FB2F97B1D8007E4083 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 77AE72FA2F97B1D8007E4083 /* Alamofire */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		776F9F862F981E3200927C38 /* SETUP.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SETUP.md; sourceTree = "<group>"; };
 		77AE71722F979406007E4083 /* AirQualityBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQualityBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77AE717F2F979407007E4083 /* AirQualityBookingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirQualityBookingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77AE71892F979407007E4083 /* AirQualityBookingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirQualityBookingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 		77AE71692F979406007E4083 = {
 			isa = PBXGroup;
 			children = (
+				776F9F862F981E3200927C38 /* SETUP.md */,
 				77AE71742F979406007E4083 /* AirQualityBooking */,
 				77AE71822F979407007E4083 /* AirQualityBookingTests */,
 				77AE718C2F979407007E4083 /* AirQualityBookingUITests */,
@@ -241,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				776F9F872F981E3200927C38 /* SETUP.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

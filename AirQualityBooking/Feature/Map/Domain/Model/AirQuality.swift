@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AirQuality: Equatable, Hashable {
+nonisolated public struct AirQuality: Equatable, Hashable {
     public let aqi: Int
     public let coordinate: Coordinate
 

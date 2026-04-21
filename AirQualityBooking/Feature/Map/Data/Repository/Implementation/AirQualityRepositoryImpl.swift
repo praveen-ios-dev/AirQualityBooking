@@ -10,8 +10,9 @@ import Foundation
 final class AirQualityRepositoryImpl: AirQualityRepository {
     private let networkService: AirQualityNetworkService
 
-    init(networkService: AirQualityNetworkService) {
+    init(networkService: AirQualityNetworkService, isFetchingFromMockData: Bool = false) {
         self.networkService = networkService
+        AppConfig.useMocks = isFetchingFromMockData
     }
 
     func fetchAQI(at coordinate: Coordinate) async throws -> AirQuality {

@@ -1,0 +1,19 @@
+# Config files (DO NOT COMMIT)
+Config.xcconfig
+
+# Xcode
+DerivedData/
+build/
+
+# Xcode user data
+*.xcworkspace/xcuserdata/
+*.xcuserdatad/
+*.xcuserstate
+
+# SwiftPM
+.swiftpm/
+.build/
+
+*.ipa
+*.dSYM.zip
+*.dSYM
