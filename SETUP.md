@@ -36,10 +36,7 @@ enum AppConfig {
 }
 ```
 
-In all *RepositoryImpl init by default it is set as false except BookRepositoryImpl because that data we are always reading from Mock
-- This is also one of the reason to keep it in init.
-
-When `useMocks in *RepositoryImpl = true`, all network calls return deterministic mock data
+When `useMocks = true`, all network calls return deterministic mock data
 with a small simulated delay. **Business logic is untouched.**
 
 ### 5. Run Tests
