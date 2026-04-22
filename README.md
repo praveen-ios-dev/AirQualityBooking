@@ -1,4 +1,4 @@
-<img width="1320" height="2868" alt="Simulator Screenshot - iPhone 17 Pro Max - 2026-04-22 at 18 19 41" src="https://github.com/user-attachments/assets/fed0d09a-0f4c-4bee-afae-73908f87d380" /><img width="1320" height="2868" alt="Simulator Screenshot - iPhone 17 Pro Max - 2026-04-22 at 18 19 41" src="https://github.com/user-attachments/assets/7f206026-c1b0-40b7-a382-1a096e42fdb6" /># 🌍 AirQualityBooking
+# 🌍 AirQualityBooking
 
 AirQualityBooking is a modern iOS application built using **SwiftUI** that demonstrates a scalable architecture for handling real-world features like air quality tracking, location selection, and booking workflows.
 
@@ -92,14 +92,15 @@ This is controlled via configuration, allowing flexibility for:
 
 ## 📸 Screenshots (Optional)
 
-<img width="1320" height="2868" alt="Simulator Screenshot - iPhone 17 Pro Max - 2026-04-22 at 18 20 11" src="https://github.com/user-attachments/assets/e2af9fd1-af3e-45ab-a754-3b88fbcaa96a" />
-<img width="1320" height="2868" alt="Simulator Screenshot - iPhone 17 Pro Max - 2026-04-22 at 18 20 04" src="https://github.com/user-attachments/assets/1e4dcd2b-a821-452d-9ff1-07874ecb19db" />
-<img width="1320" height="2868" alt="Simulator Screenshot - iPhone 17 Pro Max - 2026-04-22 at 18 20 02" src="https://github.com/user-attachments/assets/7489771f-e5c2-4931-af58-c66c4006b88c" />
-<img width="1320" height="2868" alt="Simulator Screenshot - iPhone 17 Pro Max - 2026-04-22 at 18 19 59" src="https://github.com/user-attachments/assets/f9081f05-dec2-4123-81e3-8e6bbf4ddb5e" />
-<img width="1320" height="2868" alt="Simulator Screenshot - iPhone 17 Pro Max - 2026-04-22 at 18 19 54" src="https://github.com/user-attachments/assets/2e496270-9d3b-4015-8d46-c2e71d072849" />
-<img width="1320" height="2868" alt="Simulator Screenshot - iPhone 17 Pro Max - 2026-04-22 at 18 19 48" src="https://github.com/user-attachments/assets/dfd2d33b-d84a-4ab1-9e29-3e1618e04a20" />
-<img width="1320" height="2868" alt="Simulator Screenshot - iPhone 17 Pro Max - 2026-04-22 at 18 19 41" src="https://github.com/user-attachments/assets/6cc6980f-ef60-4026-93f1-eca0f893d4e2" />
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e2af9fd1-af3e-45ab-a754-3b88fbcaa96a" width="120"/>
+  <img src="https://github.com/user-attachments/assets/1e4dcd2b-a821-452d-9ff1-07874ecb19db" width="120"/>
+  <img src="https://github.com/user-attachments/assets/7489771f-e5c2-4931-af58-c66c4006b88c" width="120"/>
+  <img src="https://github.com/user-attachments/assets/f9081f05-dec2-4123-81e3-8e6bbf4ddb5e" width="120"/>
+  <img src="https://github.com/user-attachments/assets/2e496270-9d3b-4015-8d46-c2e71d072849" width="120"/>
+  <img src="https://github.com/user-attachments/assets/dfd2d33b-d84a-4ab1-9e29-3e1618e04a20" width="120"/>
+  <img src="https://github.com/user-attachments/assets/6cc6980f-ef60-4026-93f1-eca0f893d4e2" width="120"/>
+</p>
 
 ## 🛠️ Setup
 
