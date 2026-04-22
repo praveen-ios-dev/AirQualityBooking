@@ -11,22 +11,15 @@ import FactoryKit
 
 struct MapView: View {
     @Bindable var viewModel: MapViewModel
-//    @Injected(\.mapViewModel) private var viewModel
-    
+    @State private var locationManager = LocationManager.shared
     @State var coordinator: AppCoordinator
-    
     @State private var mapCamera: MapCameraPosition = .userLocation(fallback: .automatic)
     @State private var isFirstLoad = true
     
     var body: some View {
         ZStack {
-            // MARK: Full-screen Map
             mapLayer
-
-            // MARK: Center Pin
             centerPin
-
-            // MARK: AQI Badge (top-right)
             VStack {
                 HStack {
                     Spacer()
@@ -36,8 +29,6 @@ struct MapView: View {
                 }
                 Spacer()
             }
-
-            // MARK: Bottom Panel
             VStack {
                 Spacer()
                 bottomPanel
@@ -53,9 +44,9 @@ struct MapView: View {
             Text(viewModel.errorMessage ?? "")
         }
         .task {
-            // Request location on first appear
             if isFirstLoad {
                 isFirstLoad = false
+                locationManager.requestPermission()
                 mapCamera = .userLocation(fallback: .region(
                     MKCoordinateRegion(
                         center: CLLocationCoordinate2D(latitude: 37.5665, longitude: 126.9780),
@@ -79,6 +70,10 @@ struct MapView: View {
                 longitude: context.camera.centerCoordinate.longitude
             )
             viewModel.handle(.mapCameraChanged(coord))
+        }.onChange(of: locationManager.region){
+            withAnimation {
+                mapCamera = .region(locationManager.region)
+            }
         }
     }
 

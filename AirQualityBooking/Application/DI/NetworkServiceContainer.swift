@@ -17,6 +17,6 @@ extension Container {
     }
 
     var bookNetworkService: Factory<BookNetworkService> {
-        self { AppConfig.useMocks ? MockBookNetworkService() as BookNetworkService : BookAPIService() as BookNetworkService }
+        self { !AppConfig.useMocks ? MockBookNetworkService() as BookNetworkService : BookAPIService() as BookNetworkService }.scope(.unique)
     }
 }

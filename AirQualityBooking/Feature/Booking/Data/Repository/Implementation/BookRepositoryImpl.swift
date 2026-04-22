@@ -10,9 +10,8 @@ import Foundation
 final class BookRepositoryImpl: BookRepository {
     private let networkService: BookNetworkService
 
-    init(networkService: BookNetworkService, isFetchingFromMockData: Bool = true) {
+    init(networkService: BookNetworkService) {
         self.networkService = networkService
-        AppConfig.useMocks = isFetchingFromMockData
     }
 
     func createBook(locationA: BookedLocation, locationB: BookedLocation) async throws -> BookRecord {

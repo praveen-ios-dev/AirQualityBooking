@@ -10,9 +10,8 @@ import Foundation
 final class LocationRepositoryImpl: LocationRepository {
     private let networkService: LocationNetworkService
 
-    init(networkService: LocationNetworkService, isFetchingFromMockData: Bool = false) {
+    init(networkService: LocationNetworkService) {
         self.networkService = networkService
-        AppConfig.useMocks = isFetchingFromMockData
     }
 
     func fetchLocationName(at coordinate: Coordinate) async throws -> String {

@@ -15,7 +15,7 @@ extension Container {
 }
 
 struct AppConfig {
-    static var useMocks: Bool = false
+    static let useMocks: Bool = false
     
     nonisolated static var aqiToken: String {
             guard let token = Bundle.main.object(forInfoDictionaryKey: "AQI_TOKEN") as? String,
