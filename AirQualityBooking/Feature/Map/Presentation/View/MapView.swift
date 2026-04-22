@@ -7,9 +7,12 @@
 
 import SwiftUI
 import MapKit
+import FactoryKit
 
 struct MapView: View {
-    @State var viewModel: MapViewModel
+    @Bindable var viewModel: MapViewModel
+//    @Injected(\.mapViewModel) private var viewModel
+    
     @State var coordinator: AppCoordinator
     
     @State private var mapCamera: MapCameraPosition = .userLocation(fallback: .automatic)
@@ -41,8 +44,11 @@ struct MapView: View {
             }
         }
         .ignoresSafeArea()
-        .alert("Error", isPresented: .constant(viewModel.errorMessage != nil)) {
-            Button("OK") {}
+        .alert("Error", isPresented: Binding(
+            get: { viewModel.errorMessage != nil },
+            set: { _ in viewModel.errorMessage = nil }
+        )) {
+            Button("OK", role: .cancel) {}
         } message: {
             Text(viewModel.errorMessage ?? "")
         }

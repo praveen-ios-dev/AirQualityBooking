@@ -16,9 +16,9 @@ final class FetchLocationNameUseCaseTests: XCTestCase {
         let cache = CoordinateCache()
         let repo = MockLocationRepo()
         repo.stubbedName = "Gangnam-gu"
-        let sut = FetchLocationNameUseCaseImpl(repository: repo, cache: cache)
+        let sut = await FetchLocationNameUseCaseImpl(repository: repo, cache: cache)
 
-        let coord = Coordinate(latitude: 37.5172, longitude: 127.0473)
+        let coord = await Coordinate(latitude: 37.5172, longitude: 127.0473)
         let name1 = try await sut.execute(coordinate: coord)
         let name2 = try await sut.execute(coordinate: coord)
 

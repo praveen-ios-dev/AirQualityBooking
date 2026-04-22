@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - BookRecord.swift
 
-public struct BookedLocation: Equatable {
+public struct BookedLocation: Equatable, Sendable {
     public let coordinate: Coordinate
     public let aqi: Int
     public let name: String

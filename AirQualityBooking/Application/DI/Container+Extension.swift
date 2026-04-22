@@ -14,7 +14,7 @@ extension Container {
     }
 }
 
-enum AppConfig {
+struct AppConfig {
     static var useMocks: Bool = false
     
     nonisolated static var aqiToken: String {

@@ -18,9 +18,9 @@ import Observation
     // MARK: Factory Injected
     private let mapViewModel: MapViewModel
     
-    init(mapViewModel: MapViewModel = Container.shared.mapViewModel()) {
-        self.mapViewModel = mapViewModel
-    }
+    init() {
+            self.mapViewModel = Container.shared.mapViewModel()
+        }
     
     // MARK: Navigation Methods
     

@@ -23,7 +23,7 @@ public struct Location: Equatable, Hashable {
     public var displayName: String { nickname ?? name }
 }
 
-public struct Coordinate: Equatable, Hashable, Codable {
+public struct Coordinate: Equatable, Hashable, Codable, Sendable {
     public let latitude: Double
     public let longitude: Double
 

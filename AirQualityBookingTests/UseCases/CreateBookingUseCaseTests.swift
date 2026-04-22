@@ -14,10 +14,10 @@ final class CreateBookingUseCaseTests: XCTestCase {
 
     func test_execute_returnsRecordWithCorrectLocations() async throws {
         let repo = MockBookRepo()
-        let sut = CreateBookingUseCaseImpl(repository: repo)
+        let sut = await CreateBookingUseCaseImpl(repository: repo)
 
-        let locA = BookedLocation(coordinate: Coordinate(latitude: 37.0, longitude: 127.0), aqi: 30, name: "A")
-        let locB = BookedLocation(coordinate: Coordinate(latitude: 37.1, longitude: 127.1), aqi: 40, name: "B")
+        let locA = await BookedLocation(coordinate: Coordinate(latitude: 37.0, longitude: 127.0), aqi: 30, name: "A")
+        let locB = await BookedLocation(coordinate: Coordinate(latitude: 37.1, longitude: 127.1), aqi: 40, name: "B")
 
         let record = try await sut.execute(locationA: locA, locationB: locB)
         XCTAssertEqual(record.locationA.name, "A")

@@ -63,7 +63,9 @@ struct HistoryView: View {
             )
             Divider().frame(height: 40)
             statCard(
-                value: "₩\(Int(viewModel.totalPrice).formatted())",
+                value: viewModel.totalPrice.formatted(
+                    .currency(code: Locale.current.currency?.identifier ?? "USD")
+                ),
                 label: "Total Spent",
                 icon: "wonsign.circle.fill",
                 color: .orange
@@ -151,7 +153,8 @@ struct BookRecordRow: View {
 
             HStack {
                 Spacer()
-                Text("₩\(Int(record.price).formatted())")
+                Text(record.price.formatted(
+                    .currency(code: Locale.current.currency?.identifier ?? "USD")))
                     .font(.headline)
                     .fontWeight(.bold)
                     .foregroundStyle(.orange)

@@ -19,36 +19,36 @@ public actor CoordinateCache {
 
     // MARK: - Location Name
 
-    public func locationName(for coordinate: Coordinate) -> String? {
-        locationNames[coordinate.cacheKey]
+    public func locationName(for coordinate: Coordinate)async  -> String? {
+        return await locationNames[coordinate.cacheKey]
     }
 
-    public func storeLocationName(_ name: String, for coordinate: Coordinate) {
-        locationNames[coordinate.cacheKey] = name
+    public func storeLocationName(_ name: String, for coordinate: Coordinate)async {
+        await locationNames[coordinate.cacheKey] = name
     }
 
     // MARK: - Air Quality
 
-    public func airQuality(for coordinate: Coordinate) -> AirQuality? {
-        airQualities[coordinate.cacheKey]
+    public func airQuality(for coordinate: Coordinate)async -> AirQuality? {
+        await airQualities[coordinate.cacheKey]
     }
 
-    public func storeAirQuality(_ aq: AirQuality, for coordinate: Coordinate) {
-        airQualities[coordinate.cacheKey] = aq
+    public func storeAirQuality(_ aq: AirQuality, for coordinate: Coordinate)async {
+        await airQualities[coordinate.cacheKey] = aq
     }
 
     // MARK: - Map Pins (for Screen 5)
 
-    public func storePin(_ pin: MapPin) {
-        mapPins[pin.coordinate.cacheKey] = pin
+    public func storePin(_ pin: MapPin)async {
+        await mapPins[pin.coordinate.cacheKey] = pin
     }
 
     public func allPins() -> [MapPin] {
         Array(mapPins.values)
     }
 
-    public func pin(for coordinate: Coordinate) -> MapPin? {
-        mapPins[coordinate.cacheKey]
+    public func pin(for coordinate: Coordinate)async -> MapPin? {
+        await mapPins[coordinate.cacheKey]
     }
 
     // MARK: - Reset

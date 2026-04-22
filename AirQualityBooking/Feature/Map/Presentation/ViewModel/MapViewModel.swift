@@ -37,7 +37,7 @@ enum ButtonState: Equatable {
     private(set) var pinB: MapPin?
     private(set) var buttonState: ButtonState = .setA
     private(set) var isLoadingAQI: Bool = false
-    private(set) var errorMessage: String?
+    var errorMessage: String?
     
     // MARK: - Dependencies
 

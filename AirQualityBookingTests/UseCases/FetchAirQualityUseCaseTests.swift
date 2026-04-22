@@ -15,9 +15,9 @@ final class FetchAirQualityUseCaseTests: XCTestCase {
     func test_execute_returnsCachedValue() async throws {
         let cache = CoordinateCache()
         let repo = MockAirQualityRepo()
-        let sut = FetchAirQualityUseCaseImpl(repository: repo, cache: cache)
+        let sut = await FetchAirQualityUseCaseImpl(repository: repo, cache: cache)
 
-        let coord = Coordinate(latitude: 37.5, longitude: 127.0)
+        let coord = await Coordinate(latitude: 37.5, longitude: 127.0)
 
         // First call → hits repo
         let result1 = try await sut.execute(coordinate: coord)
@@ -33,7 +33,7 @@ final class FetchAirQualityUseCaseTests: XCTestCase {
         let cache = CoordinateCache()
         let repo = MockAirQualityRepo()
         repo.stubbedResult = .failure(NetworkError.invalidResponse)
-        let sut = FetchAirQualityUseCaseImpl(repository: repo, cache: cache)
+        let sut = await FetchAirQualityUseCaseImpl(repository: repo, cache: cache)
 
         do {
             _ = try await sut.execute(coordinate: Coordinate(latitude: 0, longitude: 0))

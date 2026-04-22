@@ -33,14 +33,14 @@ final class CoordinateCacheTests: XCTestCase {
     }
 
     func test_storeAndRetrieve_locationName() async {
-        let coord = Coordinate(latitude: 37.5665, longitude: 126.9780)
+        let coord = await Coordinate(latitude: 37.5665, longitude: 126.9780)
         await sut.storeLocationName("Seoul", for: coord)
         let retrieved = await sut.locationName(for: coord)
         XCTAssertEqual(retrieved, "Seoul")
     }
 
     func test_storeAndRetrieve_airQuality() async {
-        let coord = Coordinate(latitude: 37.5665, longitude: 126.9780)
+        let coord = await Coordinate(latitude: 37.5665, longitude: 126.9780)
         let aq = AirQuality(aqi: 42, coordinate: coord)
         await sut.storeAirQuality(aq, for: coord)
         let retrieved = await sut.airQuality(for: coord)

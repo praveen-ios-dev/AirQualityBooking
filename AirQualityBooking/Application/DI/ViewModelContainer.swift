@@ -16,7 +16,7 @@ extension Container {
                 fetchLocationName: self.fetchLocationNameUseCase(),
                 cache: self.coordinateCache()
             )
-        }
+        }.shared
     }
     
     var historyViewModel: Factory<HistoryViewModel> {

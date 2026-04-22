@@ -10,7 +10,6 @@ import SwiftUI
 struct BookingView: View {
     @State var viewModel: BookingViewModel
     @State var coordinator: AppCoordinator
-    @Environment(\.dismiss) private var dismiss
 
     var body: some View {
         VStack(spacing: 0) {
@@ -137,7 +136,9 @@ struct BookingView: View {
                     Text("Total Price")
                         .foregroundStyle(.secondary)
                     Spacer()
-                    Text("₩\(Int(record.price).formatted())")
+                    Text(record.price.formatted(
+                        .currency(code: Locale.current.currency?.identifier ?? "USD")
+                    ))
                         .font(.title2)
                         .fontWeight(.bold)
                         .foregroundStyle(.orange)
