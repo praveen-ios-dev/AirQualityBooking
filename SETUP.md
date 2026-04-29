@@ -16,15 +16,34 @@ Xcode resolves packages automatically via `Package.swift`:
 - **Alamofire** 5.9+ — networking
 - **Factory** 2.3+ — dependency injection
 
-### 3. API Keys
-
-Open `Config.xcconfig` and replace:
-
-```swift
+###  3. Configure API Keys
+This project uses an .xcconfig file to manage API keys securely.
+## Steps ##
+- Open Config.xcconfig
+- Add your API key:
 // AirQualityAPIService
-AQI_TOKEN = 
-// Get a free token at: https://aqicn.org/data-platform/token/
-```
+- AQI_TOKEN = YOUR_API_KEY_HERE
+
+## Link the config file to the project: ##
+- Go to Project → Target → Build Settings
+- 
+## Search for Base Configuration ##
+- Assign Config.xcconfig to your target
+- The API key is injected via Info.plist (no hardcoding in source code)
+- 
+## Get API Key ##
+- Generate a free token:
+- https://aqicn.org/data-platform/token/
+  
+### Note (Demo Purpose)
+For demonstration purposes, a sample API key may already be present in Config.xcconfig to allow the project to run without additional setup.
+- In a real-world/production environment:
+- Config.xcconfig should be excluded using .gitignore
+- API keys must not be committed to version control
+## Troubleshooting
+- Ensure AQI_TOKEN is not empty
+- Clean & rebuild the project
+- Verify Config.xcconfig is properly linked to the target
 
 ### 4. Toggle Mocks
 
