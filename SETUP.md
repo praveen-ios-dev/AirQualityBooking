@@ -19,6 +19,8 @@ Xcode resolves packages automatically via `Package.swift`:
 ### 3. API Keys
 
 Open `Config.xcconfig` and replace:
+API key can be configurable from CICD
+right now i am hardcording this to make this work but added same in .gitIgnore so that other can't push it in git
 
 ```swift
 // AirQualityAPIService
