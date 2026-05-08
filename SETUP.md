@@ -24,7 +24,8 @@ right now i am hardcording this to make this work but added same in .gitIgnore s
 
 ```swift
 // AirQualityAPIService
-AQI_TOKEN = 
+Use below token so that it will work.
+AQI_TOKEN = "1bd85245dace9053499cb87a126716bf500575eb"
 // Get a free token at: https://aqicn.org/data-platform/token/
 ```
 

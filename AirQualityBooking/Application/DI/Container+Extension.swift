@@ -17,9 +17,11 @@ extension Container {
 struct AppConfig {
     static let useMocks: Bool = false
     
+    
     nonisolated static var aqiToken: String {
             guard let token = Bundle.main.object(forInfoDictionaryKey: "AQI_TOKEN") as? String,
                   !token.isEmpty else {
+                // add AQI in Config.xcconfig latterOn it will be handled by CICD
                 fatalError("AQI_TOKEN not found in Info.plist")
             }
             return token
